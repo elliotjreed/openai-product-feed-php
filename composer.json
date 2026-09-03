@@ -1,0 +1,63 @@
+{
+  "name": "elliotjreed/openai-product-feed",
+  "description": "A PHP library for creating an OpenAI product feed (https://developers.openai.com/commerce/specs/file-upload/products)",
+  "keywords": [
+    "openai",
+    "chatgpt",
+    "product-feed",
+    "shopping",
+    "ads",
+    "openai-product-feed"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Elliot J. Reed",
+      "email": "openai-product-feed-php@elliotjreed.com",
+      "homepage": "https://www.elliotjreed.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/elliotjreed/openai-product-feed",
+  "autoload": {
+    "psr-4": {
+      "ElliotJReed\\": "src/ElliotJReed/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ElliotJReed\\Tests\\": "tests/ElliotJReed/"
+    }
+  },
+  "require": {
+    "php": "^8.4",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "*",
+    "phpunit/phpunit": "^13.3",
+    "roave/security-advisories": "dev-master",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "scripts": {
+    "test": [
+      "@phpunit:coverage",
+      "@phpcs"
+    ],
+    "phpunit": "vendor/bin/phpunit --display-deprecations -c phpunit.xml",
+    "phpunit:debug": "vendor/bin/phpunit --display-deprecations --stop-on-failure -c phpunit.xml",
+    "phpunit:coverage": "vendor/bin/phpunit --display-deprecations -c phpunit.xml --coverage-html ./coverage --coverage-text",
+    "phpunit:ci": "vendor/bin/phpunit --display-deprecations -c phpunit.xml --coverage-text",
+    "phpcs": "vendor/bin/php-cs-fixer fix --allow-risky=yes && vendor/bin/phpcs --standard=phpcs.xml",
+    "phpcs:ci": "vendor/bin/php-cs-fixer fix --allow-risky=yes --dry-run && vendor/bin/phpcs --standard=phpcs.xml"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  }
+}
