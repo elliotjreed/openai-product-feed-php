@@ -1,9 +1,12 @@
 {
   "name": "elliotjreed/openai-product-feed",
-  "description": "A library for generating a product feed according to the OpenAI specification",
-  "version": "1.0.0",
+  "description": "A PHP library for creating an OpenAI product feed (https://developers.openai.com/commerce/specs/file-upload/products)",
   "keywords": [
-    "elliotjreed",
+    "openai",
+    "chatgpt",
+    "product-feed",
+    "shopping",
+    "ads",
     "openai-product-feed"
   ],
   "license": "MIT",
@@ -29,12 +32,12 @@
   },
   "require": {
     "php": "^8.4",
-    "ext-zlib": "*",
-    "moneyphp/money": "^4.8"
+    "ext-json": "*",
+    "ext-mbstring": "*"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "*",
-    "phpunit/phpunit": "^12.5",
+    "phpunit/phpunit": "^13.3",
     "roave/security-advisories": "dev-master",
     "squizlabs/php_codesniffer": "*"
   },
